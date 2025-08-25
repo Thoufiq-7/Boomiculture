@@ -1,12 +1,17 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
+from flask import Flask, send_from_directory
 
-app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
 
-@app.route('/api/hello')
-def hello():
-    return jsonify(message='Hello from Flask backend!')
+@app.route('/')
+def serve_index():
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    if path != '' and (path.startswith('static/') or path.startswith('assets/')):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(debug=True)
