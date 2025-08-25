@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Set a solid white background for the entire app */
+body {
+    background-color: #ffffff; /* pure white */
+    color: #1f2937; /* gray-800 for contrast */
+}
