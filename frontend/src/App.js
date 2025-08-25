@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MainPage from "./MainPage";
-import Blogs from "./Blogs";
-import Features from "./Features";
-import Login from "./Login";
-import Navbar from "./Navbar";
+import MainPage from "./pages/MainPage";
+import Blogs from "./pages/Blogs";
+import Features from "./pages/Features";
+import Login from "./pages/Login";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/blogs" element={<Blogs />} />
