@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero from '../components/Hero';
+import MainPageContent from '../components/MainPageContent';
 
 export default function MainPage() {
   return (
     <div>
-      <Hero />
+      <MainPageContent />
     </div>
   );
 }
