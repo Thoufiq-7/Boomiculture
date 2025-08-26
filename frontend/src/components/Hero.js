@@ -3,7 +3,7 @@ import NPKImage from '../assets/NPKimage.png';
 
 function Hero() {
   return (
-    <section className="bg-gradient-to-br from-white to-green-100 text-gray-800 min-h-screen pt-16 flex items-center justify-center">
+    <section className="bg-gradient-to-br from-white to-green-100 text-gray-800 min-h-screen pt-2 flex items-center justify-center">
       <div className="container mx-auto px-6 py-20 md:flex md:items-center md:space-x-12 relative z-10">
         {/* Text content */}
         <div className="md:w-1/2 text-center md:text-left">
