@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
 import FeatureSection from './FeatureSection'; // Import the new component
+import Footer from './Footer';
 
 // Assuming these images are in your assets folder
 import image1 from '../assets/image1.png';  
@@ -66,6 +67,7 @@ const MainPageContent = () => (
       imageAlt="A beautiful landscape image of farming"
       reverse={false}
     />
+    <Footer />
 
     {/* Second Feature Section (text on right) */}
     
